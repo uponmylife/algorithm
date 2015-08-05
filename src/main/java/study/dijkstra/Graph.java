@@ -8,12 +8,9 @@ import java.util.stream.Collectors;
 public class Graph {
 	private List<Edge> edges = new ArrayList<>();
 
-	public void add(Edge edge) {
-		edges.add(edge);
-	}
-
-	public void addEdge(String node1, String node2, int weight) {
-		add(new Edge(node1, node2, weight));
+	public Graph addEdge(String node1, String node2, int weight) {
+		edges.add(new Edge(node1, node2, weight));
+		return this;
 	}
 
 	public Set<String> getAllNodes() {

@@ -14,7 +14,7 @@ public class Dijkstra {
 		nodes.forEach(n -> distances.put(n, Integer.MAX_VALUE));
 		distances.put(source, 0);
 
-		while (!(nodes.size() == 0)) {
+		while (nodes.size() > 0) {
 			String minNode = nodes.stream().min(distanceComparator).get();
 			nodes.remove(minNode);
 
